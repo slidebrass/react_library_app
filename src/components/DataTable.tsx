@@ -5,7 +5,8 @@ import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import { useGetData } from '../custom-hooks/FetchData';
 
 const columns: GridColDef[] = [
-	{ field: 'isbn', headerName: "ISBN", width: 90, flex: 1 },
+	{ field: 'id', headerName: "ID", width: 90},
+	{ field: 'isbn', headerName: "ISBN", flex: 1 },
 	{ field: 'author', headerName: 'Author', flex: 1 },
 	{ field: 'title', headerName: 'Title', flex: 1 },
 	{ field: 'page_length', headerName: 'Page Length', flex: 1 },
@@ -13,7 +14,7 @@ const columns: GridColDef[] = [
 ]
 
 function DataTable() {
-	const [ open, setOpen ] = useState(false);
+	let [ open, setOpen ] = useState(false);
 	const { bookData, getData } = useGetData();
 	const [ selectionModel, setSelectionModel ] = useState<string[]>([])
 
@@ -35,21 +36,22 @@ function DataTable() {
   return (
     <>
 			<Modal
+				id={selectionModel}
 				open={open}
 				onClose={handleClose}
 			/>
 			<div className="flex flex-row">
 				<div>
-					<button className="p-3 bg-slate-300 rounded m-3 hover:bg-slate-800 hover:text-white"
+					<button className="p-3 bg-[#C9CBA3] text-[#723D46] rounded m-3 hover:bg-[#472D30] hover:text-[#E26D5C]"
 					onClick={() => handleOpen()}
 					>
 						Create New Book Record
 					</button>
 				</div>
-				<button onClick={handleOpen} className="p-3 bg-slate-300 rounded m-3 hover:bg-slate-800 hover: text-white">
+				<button onClick={handleOpen} className="p-3 bg-[#C9CBA3] text-[#723D46] rounded m-3 hover:bg-[#472D30] hover:text-[#E26D5C]">
 					Update Book Record
 				</button>
-				<button onClick={deleteData} className="p-3 bg-slate-300 rounded m-3 hover:bg-slate-800 hover: text-white">
+				<button onClick={deleteData} className="p-3 bg-[#C9CBA3] text-[#723D46] rounded m-3 hover:bg-[#472D30] hover:text-[#E26D5C]">
 					Delete Book Record
 				</button>
 			</div>

@@ -21,8 +21,8 @@ const Modal = ( props: Props ) => {
 			>
 				<div className="w-full flex flex-col">
 					<div className="flex flex-row space-apart">
-						<p className="flex justify-start m-3 bg-slate-300 p-2 rounded 
-							hover:bg-slate-800 text-white"
+						<p className="flex justify-start m-3 bg-[#C9CBA3] text-[#723D46] p-2 rounded 
+							hover:bg-[#472D30] hover:text-[#E26D5C]"
 							onClick={props.onClose}>
 								X
 							</p>

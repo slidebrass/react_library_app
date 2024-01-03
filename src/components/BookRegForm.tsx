@@ -63,8 +63,8 @@ const BookRegForm = ( props:BookRegProps) => {
 					<Input {...register('cover')} name='cover' placeholder="Cover" />
 				</div>
 				<div className="flex p-1">
-					<button className="flex justify-start m-3 bg-slate-300 p-2 rounded 
-						hover:bg-slate-800 text-white"
+					<button className="flex justify-start m-3 bg-[#C9CBA3] text-[#723D46] p-2 rounded 
+						hover:bg-[#472D30] hover:text-[#E26D5C]"
 					>
 						Submit
 					</button>
