@@ -22,7 +22,7 @@ const BookRegForm = ( props:BookRegProps) => {
 		if (props.id && props.id.length > 0) {
 			server_calls.update(props.id[0], data)
 			console.log(`Updated: ${ data.isbn } ${ props.id }`)
-			setTimeout(() => {window.location.reload()}, 500)
+			setTimeout(() => {window.location.reload()}, 5000)
 			event.target.reset()
 		} else {
 			dispatch(chooseISBN(data.isbn));
@@ -32,7 +32,7 @@ const BookRegForm = ( props:BookRegProps) => {
 			dispatch(chooseCover(data.cover));
 
 			server_calls.create(store.getState());
-			setTimeout(() => {window.location.reload()}, 500);
+			setTimeout(() => {window.location.reload()}, 5000);
 			event.target.reset();
 
 			props.onClose();

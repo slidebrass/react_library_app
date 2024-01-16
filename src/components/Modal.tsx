@@ -1,7 +1,7 @@
 import BookRegForm from "./BookRegForm";
 
 type Props = {
-	id?: string[],
+	id?: string[];
 	open: boolean;
 	onClose: () => void;
 }

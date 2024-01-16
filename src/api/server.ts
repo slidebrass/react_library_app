@@ -39,7 +39,7 @@ export const server_calls = {
 	},
 
 	update: async (id: string, data: any = {}) => {
-		const response = await fetch (`https://library-app-hbr4.onrender.com/api/books${id}`,
+		const response = await fetch (`https://library-app-hbr4.onrender.com/api/books/${id}`,
 		{
 			method: 'PUT',
 			headers: {
@@ -58,7 +58,7 @@ export const server_calls = {
 	},
 
 	delete: async (id: string) => {
-		const response = await fetch(`https://library-app-hbr4.onrender.com/api/books${id}`,
+		const response = await fetch(`https://library-app-hbr4.onrender.com/api/books/${id}`,
 		{
 			method: 'DELETE',
 			headers: {

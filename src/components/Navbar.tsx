@@ -49,7 +49,7 @@ function Navbar() {
                         <div>
                             <Link to='/' onClick={clicked} className='flex place-itmes-center mt-4 
                                 lg:inline-block lg:mt-0 text-[#723D46] hover:text-[#E26D5C] 
-                                mr-4'>
+                               '>
                                     Home
                             </Link>
                         </div>
@@ -58,26 +58,26 @@ function Navbar() {
                         <div>
                             <Link to='/dashboard' onClick={clicked} className='flex place-itmes-center mt-4 
                                 lg:inline-block lg:mt-0 text-[#723D46] hover:text-[#E26D5C] 
-                                mr-4'>
+                               '>
                                     Dashboard
                             </Link>
                         </div>
                     </button>
                     {
                         !auth.currentUser ?
-                        <button>
+                        <button className='p-3 m-5 bg-[#C9CBA3] justify-center'>
                             <div>
                                 <Link to="/" onClick={ () => { signInOnClick()}} className='flex place-items-center mt-4
-                                lg:inline-block lg:mt-0 text-teal-200 hover:text-white'>
+                                lg:inline-block lg:mt-0 text-[#723D46] hover:text-[#E26D5C]'>
                                     Login
                                 </Link>
                             </div>
                         </button>
                         :
-                        <button className="p-3 m-5 bg-teal-400 justify-center">
+                        <button className="p-3 m-5 bg-[#C9CBA3] justify-center">
                             <div>
                                 <Link to='/' onClick={ () => {signOutOnClick()}} className='flex place-items-center mt-4
-                                lg:inline-block lg:mt-0 text-teal_200 hover:text-white'>
+                                lg:inline-block lg:mt-0 text-[#723D46] hover:text-[#E26D5C]'>
                                     Logout
                                 </Link>
                             </div>
